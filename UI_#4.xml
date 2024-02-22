@@ -19,8 +19,8 @@
       <E name="header" datatype="text" index="false" value="&quot;Лот&quot; " />
       <E name="subheader" datatype="text" index="false" view="invisible" />
       <E name="Статус" datatype="text" index="true" edit="textbox" required="true" default="&quot;Подготовка лота&quot; " />
-      <E displayname="Поле 1" name="Поле 1" datatype="longtext" index="true" />
-      <E displayname="Поле 2" name="Поле 2" datatype="boolean" index="true" default="0" /> 
+      <E displayname="Поле 1" name="Поле_1" datatype="longtext" index="true" />
+      <E displayname="Поле 2" name="Поле_2" datatype="boolean" index="true" default="0" /> 
       <E name="ИД_извещения" datatype="integer" index="true" displayname="ИД извещения" view="invisible" />
       <E name="ИД_позиции_плана" datatype="text" index="true" displayname="ИД позиции плана" view="invisible" />
       <E name="ИД_в_ЕИС" datatype="text" index="true" displayname="ИД в ЕИС" view="invisible" />
