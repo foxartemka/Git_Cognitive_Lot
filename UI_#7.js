@@ -2109,7 +2109,7 @@ $(document).on('change', "input[data-field-name='logikCenDog']", function () {
 
 var HideSomeFieldView = function() 
 {
-    var someField = $("div[data-name='Поле 1");	// поле
+    var someField = $("div[data-name='Поле 1']");	// поле
     var flag = $("div[data-name='Поле 2']").find("input[type='checkbox']");	// чекбокс
 
     if ($(flag).attr("checked")) // проверяем, установлен ли чекбокс
