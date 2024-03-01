@@ -121,13 +121,13 @@
 												</column>
 												<!-- <column>
 													<field fieldType="field" key="|Document|Источник_финансирования" name="Источник финансирования" valueType="text" />
-												</column>
+												</column> -->
 											</row>
-											<row>
+											<!-- <row>
 												<column>
 													<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_наименование" name="Основание закупки у ЕП" valueType="longtext" />
 												</column>
-											</row> -->
+											</row>  -->
 										</rows>
 									</block>
 								</column>
