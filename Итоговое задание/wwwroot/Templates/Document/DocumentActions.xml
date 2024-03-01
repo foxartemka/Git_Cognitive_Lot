@@ -7,26 +7,27 @@
  
 <Buttons>
 	<Location name="PlanningMenu">
-		<Button name="Создать документ Поток 1" id="c6bafa07-f8f4-4cd3-8999-877762e876f2" displayName="Создать документ Поток 1">   
+		<Button name="Создать документ Поток 1" displayName="Создать документ Поток 1">   
 			<Action type="Register">
 				<FlowName value="Поток 1"/>
 			</Action>
 			<Visibility>
 				<Rules>
 					<And>
-						<And>
+						<WhenHttpGetParamEquals param="searchBlock" value="Раздел с итоговым заданием" />
+						<!-- <And>
 							<WhenHttpGetParamEquals param="searchBlock" value="Раздел с итоговым заданием" />
 						</And>
-						<!-- <Or>
+						<Or>
 							<WhenUserInWorkGroup name="Инициаторы" />
 							<WhenUserInWorkGroup name="Специалист по закупкам"/>
 						</Or> -->
 					</And>
 				</Rules>
 			</Visibility> 
-			<FieldsModify>
+			<!-- <FieldsModify>
 				<SetField dst="|Document|ParentRK" value="-1" />
-			</FieldsModify>
+			</FieldsModify> -->
 		</Button>
 		
 		<Button name="Создать таблицу распределения" displayName="Создать новый документ">

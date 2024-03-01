@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Hooks>
+	<FieldsModify>
+		
+	</FieldsModify>
+	
+	<LinksModify>
+		<LinkAllLinksWhereFlow name="Заявка на размещение закупки 223ФЗ" />
+		<LinkCurrentDoc />
+	</LinksModify>
+	
+	<OnDocumentCreated transaction="single">
+		
+	</OnDocumentCreated>
+	
+	<OnRegcardEdited transaction="single"> 
+	
+	</OnRegcardEdited>
+	
+	<OnLinkAdded>
+	
+	</OnLinkAdded>
+	
+	<OnLinkDeleted>
+	
+	</OnLinkDeleted>
+</Hooks>
