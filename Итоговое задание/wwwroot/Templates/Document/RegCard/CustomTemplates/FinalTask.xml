@@ -101,25 +101,25 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Планируемый_год" name="Год планируемого периода" valueType="integer" />
+													<field fieldType="field" key="|Document|Дополнительная_информация" name="Дополнительная информация" valueType="longtext" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Планируемый_месяц_наименование" name="Месяц планируемого периода" valueType="text" />
-												</column>
-											</row>
-											<row>
-												<column>
-													<field fieldType="field" key="|Document|Планируемый_квартал" name="Квартал планируемого периода" valueType="integer" />
-												</column>
-												<column>
-													<field fieldType="field" key="|Document|Плановая_дата_окончания_исполнения" name="Срок исполнения договора" valueType="date" />
+													<field fieldType="field" key="|Document|логическое_поле_1" name="логическое поле 1" valueType="boolean" />
 												</column>
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Способ_закупки" name="Способ закупки" valueType="text" />
+													<field fieldType="field" key="|Document|Стоимость" name="Стоимость" valueType="integer" />
 												</column>
 												<column>
+													<field fieldType="field" key="|Document|Налог" name="Налог, %" valueType="integer" />
+												</column>
+											</row>
+											<row>
+												<column>
+													<field fieldType="field" key="|Document|числовое_поле_4" name="числовое поле 4" valueType="integer" />
+												</column>
+												<!-- <column>
 													<field fieldType="field" key="|Document|Источник_финансирования" name="Источник финансирования" valueType="text" />
 												</column>
 											</row>
@@ -127,7 +127,7 @@
 												<column>
 													<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_наименование" name="Основание закупки у ЕП" valueType="longtext" />
 												</column>
-											</row>
+											</row> -->
 										</rows>
 									</block>
 								</column>
@@ -141,7 +141,7 @@
 								<column>
 									<block id="17" name="Здесь должна быть таблица 1">
 										<rows>
-											<row>
+											<!-- <row>
 												<column>								
 													<field fieldType="field" key="|Document|Долгосрочный" name="Долгосрочный договор" valueType="boolean" />				  							
 												</column> 
@@ -164,7 +164,7 @@
 												<column>
 													<field fieldType="field" key="|Document|Комментарий_бюджетного_комитета" name="Комментарий бюджетного комитета" valueType="longtext"/>
 												</column>
-											</row>
+											</row> -->
 										</rows>
 									</block>
 								</column>
@@ -183,24 +183,24 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Предмет_договора" name="Предмет договора" valueType="text" />
+													<field fieldType="field" key="|Document|логическое_поле_2" name="логическое поле 2" valueType="boolean" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Комментарий" name="Комментарий" valueType="longtext" />	
+													<field fieldType="field" key="|Document|логическое_поле_3" name="логическое поле 3" valueType="boolean" />	
 												</column>
-												<!-- <column>
-													<field fieldType="field" key="|Document|Порядок_формирования_цены_договора" name="Порядок формирования цены договора" valueType="text" />
-												</column> -->
+												<column>
+													<field fieldType="field" key="|Document|Согласующий" name="Согласующий" valueType="text" />
+												</column>
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Регион" name="Регион" valueType="text" />
+													<field fieldType="field" key="|Document|текстовое_поле_5" name="текстовое поле 5" valueType="text" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|ОКАТО" name="ОКТМО" valueType="text" />
+													<field fieldType="field" key="|Document|дата_3" name="дата 3" valueType="date" />
 												</column>	
 											</row>
-											<row>
+											<!-- <row>
 												<column>       
 													<field fieldType="field" key="|Document|Признак_адреса_ППЗ" name="Единый адрес поставки для всех товаров, работ, услуг" valueType="boolean" />
 												</column>
@@ -235,7 +235,7 @@
 												<column>
 													<field fieldType="field" key="|Document|Категория_закупки" name="Категория закупки, которая не учитывается при расчёте совокупного годового стоимостного объёма договоров" valueType="longtext" />
 												</column>
-											</row>
+											</row> -->
 										</rows>
 									</block>
 								</column>
@@ -251,13 +251,13 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|НМЦ_с_НДС" name="Начальная(максимальная) цена договора" valueType="money" />
+													<field fieldType="field" key="|Document|Категория" name="Категория" valueType="text" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Валюта" name="Валюта" valueType="text" />	
+													<field fieldType="field" key="|Document|Комментарий" name="Комментарий" valueType="longtext" />	
 												</column>
 											</row>
-											<row>
+											<!-- <row>
 												<column>
 													<field fieldType="field" key="|Document|Курс_валюты" name="Курс валюты" valueType="double"/>
 												</column>
@@ -269,7 +269,7 @@
 												<column>
 													<field fieldType="field" key="|Document|НМЦД_в_рублях" name="Начальная(максимальная) цена договора в рублях" valueType="money" />
 												</column>
-											</row>
+											</row> -->
 										</rows>
 									</block>
 								</column>
