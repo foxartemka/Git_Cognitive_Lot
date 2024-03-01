@@ -13,15 +13,15 @@
 			</Action>
 			<Visibility>
 				<Rules>
-					<!-- <And>
+					<And>
 						<And>
-							<WhenHttpGetParamEquals param="searchBlock" value="Позиции плана закупок" />
+							<WhenHttpGetParamEquals param="searchBlock" value="Раздел с итоговым заданием" />
 						</And>
-						<Or>
+						<!-- <Or>
 							<WhenUserInWorkGroup name="Инициаторы" />
 							<WhenUserInWorkGroup name="Специалист по закупкам"/>
-						</Or>
-					</And> -->
+						</Or> -->
+					</And>
 				</Rules>
 			</Visibility> 
 			<FieldsModify>
