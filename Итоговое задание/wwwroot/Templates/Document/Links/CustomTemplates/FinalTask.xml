@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <root>
-  <!-- <table flow="Поток 1" name="Заявки на закупку" state-key="LLot223LinksOnNotice">   -->
+  <table flow="Поток 1" name="Заявки на закупку" state-key="LLot223LinksOnNotice">  
 		<columns>
 			<column fieldType="attribute" key="doc_RegCard/rc_Index/text_Способ_закупки" name="Способ закупки" valueType="text" sortPredicate="doc_RegCard/rc_Index/text_Способ_закупки" weight="12" isOptional="true" />
 			<column fieldType="attribute" key="doc_RegCard/rc_Index/longtext_Название_закупки" name="Название закупки" valueType="longtext" sortPredicate="doc_RegCard/rc_Index/longtext_Название_закупки" weight="12" />
