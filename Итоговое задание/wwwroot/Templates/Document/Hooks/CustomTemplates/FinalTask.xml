@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Hooks>
 	<FieldsModify>
-		
+		<SetField dst="|Document|Имя_потока" value="Поток 1" />
+        <CopyField src="%key%" dst="|Document|ParentRK"/>
 	</FieldsModify>
 	
 	<LinksModify>
-		<LinkAllLinksWhereFlow name="Заявка на размещение закупки 223ФЗ" />
+		<!-- <LinkAllLinksWhereFlow name="Заявка на размещение закупки 223ФЗ" /> -->
 		<LinkCurrentDoc />
 	</LinksModify>
 	
 	<OnDocumentCreated transaction="single">
-		
+        <NamedConstants>
+            <Constant>
+                <Setting key="IncrementedElementPath" value="|Document|Регистрационный_номер"/>
+                <Setting key="CounterNameFormat" value="({|Document|Имя_потока})"/>
+            </Constant>     
+        </NamedConstants>		
 	</OnDocumentCreated>
 	
 	<OnRegcardEdited transaction="single"> 
