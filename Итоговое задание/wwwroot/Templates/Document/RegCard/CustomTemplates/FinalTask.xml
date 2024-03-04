@@ -732,7 +732,7 @@
 			</row> -->
 		</rows>
 		<variables>
-			<variable variable-name="caption" variable-format="Позиции плана закупок{numberplanEIS}{numberposition}{RegDate}">
+			<variable variable-name="caption" variable-format="Поток 1{numberplanEIS}{numberposition}{RegDate}">
 				<field fieldType="field" key="|Document|Номер_плана_в_ЕИС" name="Номер_плана_в_ЕИС" valueType="text" variable-name="numberplanEIS" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Номер_позиции_плана" name="Номер_позиции_плана" valueType="text" variable-name="numberposition" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Дата_регистрации" name="Дата регистрации" valueType="date"  variable-name="RegDate" variable-format=", {value}" />
@@ -1765,7 +1765,7 @@
 			</row>
 		</rows>
 		<variables>
-			<variable variable-name="caption" variable-format="Позиции плана закупок{numberplanEIS}{numberposition}{RegDate}">
+			<variable variable-name="caption" variable-format="Поток 1{numberplanEIS}{numberposition}{RegDate}">
 				<field fieldType="field" key="|Document|Номер_плана_в_ЕИС" name="Номер_плана_в_ЕИС" valueType="text" variable-name="numberplanEIS" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Номер_позиции_плана" name="Номер_позиции_плана" valueType="text" variable-name="numberposition" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Дата_регистрации" name="Дата регистрации" valueType="date"  variable-name="RegDate" variable-format=", {value}" /> 
