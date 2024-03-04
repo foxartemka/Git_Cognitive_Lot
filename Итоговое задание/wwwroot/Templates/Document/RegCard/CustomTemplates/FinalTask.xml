@@ -743,8 +743,18 @@
 		<rows>
 			<row>
 				<column>			
-					<block id="tlcInfo" name="Основные сведения">
+					<block id="tlcInfo" name="Общие сведения">
 						<rows>
+							<row>
+								<column>
+									<field name="Регистрационный номер" isLabel="true" edit-name="regnumber" title="Заполняется автоматически при создании документа" />
+								</column>
+							</row>
+							<row>
+								<column>
+									<field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" valueType="text" isValue="true" edit-default-value="1" edit-name="regnumber" edit-disabled="true" />	
+								</column>
+							</row>
 							<row>
 								<column>
 									<field name="Организация-заказчик" isLabel="true" edit-name="registerOrgZa" title="Заполняется автоматически организацией, которая является инициатором"/>
