@@ -249,7 +249,23 @@
 		
 	</Location>
 	
-	<Location name="DocumentView">	
+	<Location name="DocumentView">
+
+		<Button name="Создать документ Поток 1">
+			<Action type="RegisterOnBase">
+				<FlowName value="Поток 1"/>
+			</Action>
+			<Visibility>
+				<Rules>
+					<And>
+						<And>
+							<WhenFlow name="Извещения о закупочной процедуре 223ФЗ" />
+							<WhenUserInWorkGroup name="Менеджер закупки"/>
+						</And>
+					</And>
+				</Rules>
+			</Visibility>
+		</Button>	
 		
 		<Button name="Лист согласования">
 			<Action type="Predefined">
@@ -1208,7 +1224,7 @@
 				</Rules>
 			</Visibility>
 		</Button>
-		
+
 		<Button name="Создать заявку на закупку">
 			<Action type="RegisterOnBase">
 				<FlowName value="Извещения о закупочной процедуре 223ФЗ"/>
