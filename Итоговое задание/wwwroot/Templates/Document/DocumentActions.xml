@@ -14,14 +14,13 @@
 			<Visibility>
 				<Rules>
 					<And>
-						<WhenHttpGetParamEquals param="searchBlock" value="Раздел с итоговым заданием" />
-						<!-- <And>
+						<And>
 							<WhenHttpGetParamEquals param="searchBlock" value="Раздел с итоговым заданием" />
 						</And>
 						<Or>
-							<WhenUserInWorkGroup name="Инициаторы" />
-							<WhenUserInWorkGroup name="Специалист по закупкам"/>
-						</Or> -->
+							<WhenUserInWorkGroup name="Менеджер закупки" />
+							<WhenUserInWorkGroup name="Специалист технической поддержки" />
+						</Or>
 					</And>
 				</Rules>
 			</Visibility> 
