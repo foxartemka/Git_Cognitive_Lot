@@ -244,7 +244,7 @@
 				<workgroup name="Юридический департамент"/>
 			</access>
 		</field>
-		<field name="LotChern223" value="Черновик" >
+		<!-- <field name="LotChern223" value="Черновик" >
 			<access>
 				<workgroup name="Инициаторы"/> 
 				<workgroup name="Бюджетный комитет"/> 
@@ -430,7 +430,7 @@
 			<access>
 				<workgroup name="Суперпользователи"/>       
 			</access>
-		</field>
+		</field> -->
 	</block>
 	<scripts>
 		<script file="~/Scripts/Content/Search/searchCustom.js" />
