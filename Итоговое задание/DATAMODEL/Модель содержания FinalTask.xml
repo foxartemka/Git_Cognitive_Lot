@@ -16,7 +16,7 @@
       <E name="логическое_поле_1" datatype="boolean" index="true" />
       <E displayname="Стоимость" name="Стоимость" datatype="money" index="true" />
       <E displayname="Налог, %" name="Налог" datatype="integer" index="true" />
-      <E name="логическое_поле_4" datatype="integer" index="true" />
+      <E name="числовое_поле_4" datatype="integer" index="true" />
       <A displayname="таблицы" name="таблицы">
         <S displayname="таблица 1" name="таблица_1">
           <E name="колонка_1" datatype="text" index="true" />
