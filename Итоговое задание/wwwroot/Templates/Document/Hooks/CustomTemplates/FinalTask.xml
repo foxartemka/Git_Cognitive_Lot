@@ -2,7 +2,11 @@
 <Hooks>
 	<FieldsModify>
 		<SetField dst="|Document|Имя_потока" value="Поток 1" />
-        <CopyField src="%key%" dst="|Document|ParentRK"/>
+        <!-- <CopyField src="%key%" dst="|Document|ParentRK"/> -->
+	</FieldsModify>
+	<FieldsModify source="Положения о закупках 223ФЗ">
+		<SetField dst="|Document|Имя_потока" value="Поток 1" />
+		<CopyField src="|Document|Инициатор|Инициатор_ФИО" />
 	</FieldsModify>
 	
 	<LinksModify>

@@ -57,7 +57,7 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|ФИО_ответственного" name="ФИО ответственного" valueType="text" />
+													<field fieldType="field" key="|Document|Инициатор|Инициатор_ФИО" name="ФИО ответственного" valueType="text" />
 												</column>
 												<column>
 													<field fieldType="field" key="|Document|Группа" name="Группа" valueType="addressbook" />
@@ -1621,7 +1621,7 @@
 									<field fieldType="field" key="|Document|Ответственный_исполнитель|Ответственный_исполнитель" name="Сотрудник департамента закупок" valueType="addressbook" isValue="true" edit-name="DepSotr" edit-addressbook-groups="" address-book-tool ="DZ" address-book-tool-selectable = "WorkGroup, Person, 'Специалист по закупкам'"/>
 									<field fieldType="field" key="|Document|Дата_регистрации" name="Дата регистрации" valueType="date"  isValue="true" edit-name="registerDate" edit-required="true" edit-default-value="{today}" edit-hidden="true"/>
 									<field fieldType="field" key="|Document|Имя_потока" name="Имя потока" valueType="text" isValue="true" edit-hidden="true" edit-name="flowName" />								
-									<field fieldType="field" key="|Document|Статус" name="Статус" valueType="text"  isValue="true" edit-default-value= "Черновик" edit-name="regstatus"  edit-readonly="true" edit-hidden="true"/>
+									<field fieldType="field" key="|Document|Статус" name="Статус" valueType="text"  isValue="true" edit-default-value= "Новый" edit-name="regstatus"  edit-readonly="true" edit-hidden="true"/>
 									<field fieldType="field" key="|Document|Обобщенный_статус" name="Обобщенный статус" valueType="text"  isValue="true" edit-default-value= "Подготовка процедуры к публикации" edit-name="groupregstatus"  edit-readonly="true" edit-hidden="true"/>
 									<field fieldType="field" key="|Document|Год_закупки" name="Год закупки" valueType="text" isValue="true" edit-name="godzak" edit-readonly="true"  />		
 									<field fieldType="field" key="|Document|ИД_на_ЭТП" name="ИД на ЭТП" valueType="text" isValue="true"   edit-name="ID_on_ETP"   edit-isInvisible="true" />
