@@ -2665,14 +2665,14 @@ var HideTab1Edit = function()
     {	
         tab1Block.closest(".column-container").show();
 		tab1Block.prop("required", true);
-		$(".column-tooltip-left-sibling").addClass("label-required");
+		$("[data-related-field=switchTab1]").addClass("label-required");
 		tab1Block.val("1");
     } 
     else 
     {
         tab1Block.closest(".column-container").hide();	
 		tab1Block.prop("required", false); 
-		$(".column-tooltip-left-sibling").removeClass("label-required");
+		$("[data-related-field=switchTab1]").removeClass("label-required");
 		tab1Block.val('');
     }
 	
