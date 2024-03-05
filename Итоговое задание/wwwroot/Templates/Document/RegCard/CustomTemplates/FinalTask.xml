@@ -23,7 +23,7 @@
 													<field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" valueType="text" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Редакция" name="Редакция" valueType="integer"/>
+													<field fieldType="field" key="|Document|Номер_редакции" name="Редакция" valueType="integer"/>
 												</column>
 											</row>
 											<!-- <row>

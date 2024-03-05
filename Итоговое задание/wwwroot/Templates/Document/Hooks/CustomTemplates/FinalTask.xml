@@ -15,7 +15,11 @@
             <Constant>
                 <Setting key="IncrementedElementPath" value="|Document|Регистрационный_номер"/>
                 <Setting key="CounterNameFormat" value="({|Document|Имя_потока})"/>
-            </Constant>     
+            </Constant>
+			<Constant>
+				<Setting key="IncrementedElementPath" value="|Document|Номер_редакции"/>
+				<Setting key="CounterNameFormat" value="({|Document|Имя_потока}/{|Document|ИД_первой_редакции})"/>
+			</Constant>   
         </NamedConstants>		
 	</OnDocumentCreated>
 	
