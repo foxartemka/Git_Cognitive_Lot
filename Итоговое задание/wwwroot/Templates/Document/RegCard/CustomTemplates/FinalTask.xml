@@ -60,7 +60,7 @@
 													<field fieldType="field" key="|Document|Инициатор|Инициатор_ФИО" name="ФИО ответственного" valueType="text" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Группа" name="Группа" valueType="addressbook" />
+													<field fieldType="field" key="|Document|Подразделение_инициатор|Подразделение_инициатор" name="Группа" valueType="addressbook" />
 												</column>
 											</row>
 											<!-- <row>
