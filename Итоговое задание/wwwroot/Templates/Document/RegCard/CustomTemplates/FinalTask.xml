@@ -869,7 +869,7 @@
 									<table key="|Document|таблицы" edit-name="ItemTab1" height="300" name="таблицы">
 										<column fieldType="field" key="|колонка_1" valueType="text"  isValue="true" name="Колонка 1" edit-name="Item1"  title="Введите наименование колонки 1" width="310" edit-required="true" headerNoEllipsis="true"/>
 										<column fieldType="field" key="|колонка_2" valueType="text"  isValue="true" name="Колонка 2" edit-name="Item1"  title="Введите наименование колонки 2" width="310" edit-required="true" headerNoEllipsis="true"/>
-										<column fieldType="field" key="|колонка_3" valueType="integer"  isValue="true" name="Колонка 3" edit-name="Item1"  title="Введите количество колонки 3" width="310" edit-required="true" headerNoEllipsis="true"/>
+										<column fieldType="field" key="|колонка_3" valueType="integer"  isValue="true" name="Колонка 3" edit-name="Item2"  title="Введите количество колонки 3" width="310" edit-required="true" headerNoEllipsis="true"/>
 									</table>
 								</column>
 							</row>

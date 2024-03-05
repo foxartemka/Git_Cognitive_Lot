@@ -2666,14 +2666,14 @@ var HideTab1Edit = function()
         tab1Block.closest(".column-container").show();
 		tab1Block.prop("required", true);
 		$("[data-related-field=switchTab1]").addClass("label-required");
-		tab1Block.val("1");
+		// tab1Block.val("1");
     } 
     else 
     {
         tab1Block.closest(".column-container").hide();	
 		tab1Block.prop("required", false); 
 		$("[data-related-field=switchTab1]").removeClass("label-required");
-		tab1Block.val('');
+		// tab1Block.val('');
     }
 	
 }
