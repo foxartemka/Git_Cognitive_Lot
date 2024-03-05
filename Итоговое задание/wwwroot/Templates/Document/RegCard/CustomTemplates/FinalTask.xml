@@ -119,7 +119,7 @@
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|логическое_поле_1" name="Использование таблицы 1" valueType="boolean" />
+													<field fieldType="field" key="|Document|логическое_поле_1" name="Использовать Таблицу 1" valueType="boolean" />
 												</column>
 											</row>
 										</rows>
@@ -133,14 +133,14 @@
 							</row>
 							<row>
 								<column>
-									<block id="17" name="таблица 1">
+									<block id="17" name="Таблица 1">
 										<rows>
 											<row>
 												<column>
 													<table key="|Document|таблицы" api-table-name="таблицы" height="5" horizontall-scroll="true">
-														<column fieldType="field" key="|колонка_1" valueType="text" name="колонка_1" width="80" headerNoEllipsis="true"/>
-														<column fieldType="field" key="|колонка_2" valueType="text" name="колонка_2" width="80" headerNoEllipsis="true"/>
-														<column fieldType="field" key="|колонка_3" valueType="integer" name="колонка_3" width="80" headerNoEllipsis="true"/>
+														<column fieldType="field" key="|колонка_1" valueType="text" name="колонка 1" width="80" headerNoEllipsis="true"/>
+														<column fieldType="field" key="|колонка_2" valueType="text" name="колонка 2" width="80" headerNoEllipsis="true"/>
+														<column fieldType="field" key="|колонка_3" valueType="integer" name="колонка 3" width="80" headerNoEllipsis="true"/>
 													</table>
 												</column>
 											</row>
@@ -861,15 +861,15 @@
 							</row>
 							<row>
 								<column>
-									<field fieldType="field" key="|Document|логическое_поле_1" name="Использовать таблицу 1" valueType="boolean" edit-name="onTablica1" title="Установите чекбокс, если необходимо использование таблицы 1" />
+									<field fieldType="field" key="|Document|логическое_поле_1" name="Использовать таблицу 1" valueType="boolean" edit-name="switchTab1" title="Установите чекбокс, если необходимо использование таблицы 1" />
 								</column>
 							</row>
 							<row>
 								<column>
-									<table key="|Document|таблицы" edit-name="ItemTab1" height="300" name="Таблица 1">
-										<column fieldType="field" key="|Колонка_1" valueType="text"  isValue="true" name="Колонка 1" edit-name="itemName1"  title="Введите наименование колонки 1" width="310" edit-required="true" headerNoEllipsis="true"/>
-										<column fieldType="field" key="|Колонка_2" valueType="text"  isValue="true" name="Колонка 1" edit-name="itemName1"  title="Введите наименование колонки 2" width="310" edit-required="true" headerNoEllipsis="true"/>
-										<column fieldType="field" key="|Колонка_3" valueType="integer"  isValue="true" name="Колонка 1" edit-name="registerCount1"  title="Введите количество колонки 3" width="310" edit-required="true" headerNoEllipsis="true"/>
+									<table key="|Document|таблицы" edit-name="ItemTab1" height="300" name="таблицы">
+										<column fieldType="field" key="|колонка_1" valueType="text"  isValue="true" name="Колонка 1" edit-name="Item1"  title="Введите наименование колонки 1" width="310" edit-required="true" headerNoEllipsis="true"/>
+										<column fieldType="field" key="|колонка_2" valueType="text"  isValue="true" name="Колонка 2" edit-name="Item2"  title="Введите наименование колонки 2" width="310" edit-required="true" headerNoEllipsis="true"/>
+										<column fieldType="field" key="|колонка_3" valueType="integer"  isValue="true" name="Колонка 3" edit-name="ItemCount1"  title="Введите количество колонки 3" width="310" edit-required="true" headerNoEllipsis="true"/>
 									</table>
 								</column>
 							</row>
@@ -1581,28 +1581,6 @@
 					</block>
 				</column>
 			</row>
-			<!-- <row>
-				<column>
-					<block id="tlcAnother" name="Дополнительные сведения">
-						<rows>
-							<row>
-								<column>
-									<field name="" isLabel="true" />									
-								</column>
-								<column>
-									<field name="" isLabel="true"/>									
-								</column>
-								<column>
-									<field name="" isLabel="true" />									
-								</column>
-								<column>
-									<field name="" isLabel="true"/>									
-								</column>
-							</row>
-						</rows>
-					</block>
-				</column>
-			</row> -->
 			<row>
 				<column>
 					<block id="hidden" name="Скрытые поля"> 
@@ -1766,6 +1744,6 @@
 		</variables>
 	</edit>
 	<scripts>
-		<script file="~/Scripts/Content/Document/RegCard/LLot223.js" />
+		<script file="~/Scripts/Content/Document/RegCard/FinalTask.js" />
 	</scripts>
 </root>	
