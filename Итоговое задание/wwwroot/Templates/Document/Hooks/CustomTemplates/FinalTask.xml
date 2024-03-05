@@ -28,7 +28,12 @@
 	</OnDocumentCreated>
 	
 	<OnRegcardEdited transaction="single"> 
-	
+		<!-- <Aggregation>
+			<Select/>
+			<Action>
+				<CopyField  />
+			</Action>
+		</Aggregation> -->
 	</OnRegcardEdited>
 	
 	<OnLinkAdded>
