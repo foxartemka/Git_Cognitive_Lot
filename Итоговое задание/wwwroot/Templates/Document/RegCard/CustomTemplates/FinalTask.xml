@@ -12,7 +12,7 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Дата_создания" name="Дата создания" valueType="date" />
+													<field fieldType="field" key="|Document|Дата_регистрации" name="Дата создания" valueType="date" />
 												</column>
 	                                            <column>
 													<field fieldType="field" key="|Document|Статус" name="Статус" valueType="text" />
@@ -732,7 +732,7 @@
 			</row> -->
 		</rows>
 		<variables>
-			<variable variable-name="caption" variable-format="Позиции плана закупок{numberplanEIS}{numberposition}{RegDate}">
+			<variable variable-name="caption" variable-format="Поток 1{numberplanEIS}{numberposition}{RegDate}">
 				<field fieldType="field" key="|Document|Номер_плана_в_ЕИС" name="Номер_плана_в_ЕИС" valueType="text" variable-name="numberplanEIS" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Номер_позиции_плана" name="Номер_позиции_плана" valueType="text" variable-name="numberposition" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Дата_регистрации" name="Дата регистрации" valueType="date"  variable-name="RegDate" variable-format=", {value}" />
@@ -745,7 +745,7 @@
 				<column>			
 					<block id="tlcInfo" name="Общие сведения">
 						<rows>
-							<row>
+							<!-- <row>
 								<column>
 									<field name="Регистрационный номер" isLabel="true" edit-name="regnumber" title="Заполняется автоматически при создании документа" />
 								</column>
@@ -754,7 +754,7 @@
 								<column>
 									<field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" valueType="text" isValue="true" edit-default-value="1" edit-name="regnumber" edit-disabled="true" />	
 								</column>
-							</row>
+							</row> -->
 							<row>
 								<column>
 									<field name="Организация-заказчик" isLabel="true" edit-name="registerOrgZa" title="Заполняется автоматически организацией, которая является инициатором"/>
@@ -1765,7 +1765,7 @@
 			</row>
 		</rows>
 		<variables>
-			<variable variable-name="caption" variable-format="Позиции плана закупок{numberplanEIS}{numberposition}{RegDate}">
+			<variable variable-name="caption" variable-format="Поток 1{numberplanEIS}{numberposition}{RegDate}">
 				<field fieldType="field" key="|Document|Номер_плана_в_ЕИС" name="Номер_плана_в_ЕИС" valueType="text" variable-name="numberplanEIS" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Номер_позиции_плана" name="Номер_позиции_плана" valueType="text" variable-name="numberposition" variable-format=", {value}" />
 				<field fieldType="field" key="|Document|Дата_регистрации" name="Дата регистрации" valueType="date"  variable-name="RegDate" variable-format=", {value}" /> 
