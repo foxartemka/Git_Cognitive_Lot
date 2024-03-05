@@ -103,9 +103,6 @@
 												<column>
 													<field fieldType="field" key="|Document|Дополнительная_информация" name="Дополнительная информация" valueType="longtext" />
 												</column>
-												<column>
-													<field fieldType="field" key="|Document|логическое_поле_1" name="логическое поле 1" valueType="boolean" />
-												</column>
 											</row>
 											<row>
 												<column>
@@ -119,15 +116,12 @@
 												<column>
 													<field fieldType="field" key="|Document|числовое_поле_4" name="числовое поле 4" valueType="integer" />
 												</column>
-												<!-- <column>
-													<field fieldType="field" key="|Document|Источник_финансирования" name="Источник финансирования" valueType="text" />
-												</column> -->
 											</row>
-											<!-- <row>
+											<row>
 												<column>
-													<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_наименование" name="Основание закупки у ЕП" valueType="longtext" />
+													<field fieldType="field" key="|Document|логическое_поле_1" name="Использование таблицы 1" valueType="boolean" />
 												</column>
-											</row>  -->
+											</row>
 										</rows>
 									</block>
 								</column>
@@ -139,32 +133,17 @@
 							</row>
 							<row>
 								<column>
-									<block id="17" name="Здесь должна быть таблица 1">
+									<block id="17" name="таблица 1">
 										<rows>
-											<!-- <row>
-												<column>								
-													<field fieldType="field" key="|Document|Долгосрочный" name="Долгосрочный договор" valueType="boolean" />				  							
-												</column> 
-												<column>
-													<field fieldType="field" key="|Document|Закупка_в_электронной_форме" name="Закупка в электронной форме" valueType="boolean" />									
-												</column>  											
-											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|Закупка_не_включена_в_план_закупки" name="Закупка не включена в план закупки в соответствии с ч.15 ст.4 №223-ФЗ" valueType="boolean" />
-												</column>
-												<column>								
-													<field fieldType="field" key="|Document|plannedAfterSecondYear" name="Закупка запланирована на третий или последующие годы реализации плана" valueType="boolean" />
+													<table key="|Document|таблицы" api-table-name="таблицы" height="5" horizontall-scroll="true">
+														<column fieldType="field" key="|колонка_1" valueType="text" name="колонка_1" width="80" headerNoEllipsis="true"/>
+														<column fieldType="field" key="|колонка_2" valueType="text" name="колонка_2" width="80" headerNoEllipsis="true"/>
+														<column fieldType="field" key="|колонка_3" valueType="integer" name="колонка_3" width="80" headerNoEllipsis="true"/>
+													</table>
 												</column>
 											</row>
-											<row>
-												<column>								
-													<field fieldType="field" key="|Document|Запрос_цен" name="Запрос цен" valueType="boolean" />				  							
-												</column>
-												<column>
-													<field fieldType="field" key="|Document|Комментарий_бюджетного_комитета" name="Комментарий бюджетного комитета" valueType="longtext"/>
-												</column>
-											</row> -->
 										</rows>
 									</block>
 								</column>
@@ -774,7 +753,7 @@
 							</row>
 							<row>
 								<column>
-									<field name="Отдел" isLabel="true" edit-name="IniciatorDep" title="Заполняется автоматически отделом, в который входит инициатор в рамках своей организации"/>									
+									<field name="Группа" isLabel="true" edit-name="IniciatorDep" title="Заполняется автоматически отделом, в который входит инициатор в рамках своей организации"/>									
 								</column>	
 								<column>
 									<field name="Начальник отдела" isLabel="true" edit-name="RukInic" title="Заполняется руководителем отдела, в который входит инициатор в рамках своей организации"/>								
@@ -878,6 +857,20 @@
 									<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_код" name="Основание закупки у ЕП код" valueType="text" isValue="true" edit-name="osnEP"  dictionary-selection-start-level="1" edit-tool = "formdata:Основание закупки у ЕП" edit-readonly="true" dict-column-name="code" dict-edit-name="osnEP" show-dict-column="true" />
 									<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_1" name="Основание закупки у ЕП код" valueType="text" isValue="true" edit-name="osnEP1" dict-column-name="Код" dict-edit-name="osnEP" show-dict-column="true" edit-hidden="true"/>
 									<field fieldType="field" key="|Document|Основание_закупки_у_ЕП_наименование" name="Основание закупки у ЕП" valueType="longtext" isValue="true" edit-name="osnEPName" edit-readonly="true"  dict-column-name="Наименование" edit-hidden="true" display-field-part="true" dict-edit-name="osnEP" dict-column-width-percentage="65"/>
+								</column>
+							</row>
+							<row>
+								<column>
+									<field fieldType="field" key="|Document|логическое_поле_1" name="Использовать таблицу 1" valueType="boolean" edit-name="onTablica1" title="Установите чекбокс, если необходимо использование таблицы 1" />
+								</column>
+							</row>
+							<row>
+								<column>
+									<table key="|Document|таблицы" edit-name="ItemTab1" height="300" name="Таблица 1">
+										<column fieldType="field" key="|Колонка_1" valueType="text"  isValue="true" name="Колонка 1" edit-name="itemName1"  title="Введите наименование колонки 1" width="310" edit-required="true" headerNoEllipsis="true"/>
+										<column fieldType="field" key="|Колонка_2" valueType="text"  isValue="true" name="Колонка 1" edit-name="itemName1"  title="Введите наименование колонки 2" width="310" edit-required="true" headerNoEllipsis="true"/>
+										<column fieldType="field" key="|Колонка_3" valueType="integer"  isValue="true" name="Колонка 1" edit-name="registerCount1"  title="Введите количество колонки 3" width="310" edit-required="true" headerNoEllipsis="true"/>
+									</table>
 								</column>
 							</row>
 						</rows>
