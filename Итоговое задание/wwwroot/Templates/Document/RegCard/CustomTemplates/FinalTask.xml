@@ -861,6 +861,7 @@
 							</row>
 							<row>
 								<column>
+									<field name="" isLabel="true" />
 									<field fieldType="field" key="|Document|логическое_поле_1" name="Отображение таблицы 1" valueType="boolean" edit-name="switchTab1" title="Установите чекбокс, если необходимо использование таблицы 1" />
 								</column>
 							</row>
