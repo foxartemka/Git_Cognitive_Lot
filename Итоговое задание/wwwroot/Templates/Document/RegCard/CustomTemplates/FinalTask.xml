@@ -871,13 +871,13 @@
 								</column>
 								<column>
 									<field name="" isLabel="true" />
-									<field name="Налог" isLabel="true" title="Укажите процент налога" />
+									<field name="Налог, %" isLabel="true" title="Укажите процент налога" />
 									<field fieldType="field" key="|Document|Налог" name="Налог, %" valueType="integer" edit-name="nalogPerc" isValue="true" />
 								</column>
 								<column>
 									<field name="" isLabel="true" />
 									<field name="Произведение стоимости и налога" isLabel="true" title="Автоматически заполняется, подставив результат произведение стоимости и налога" />
-									<field fieldType="field" key="|Document|числовое_поле_4" name="Сумма" valueType="integer" edit-name="sumNalPrice" isValue="true" edit-disabled="true" />
+									<field fieldType="field" key="|Document|числовое_поле_4" name="Сумма" valueType="integer" edit-name="sumNalPrice" isValue="true" edit-readonly="true" />
 								</column>
 							</row>
 							<row>
