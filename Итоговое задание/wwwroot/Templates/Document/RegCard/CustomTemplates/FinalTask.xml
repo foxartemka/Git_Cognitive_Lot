@@ -162,10 +162,13 @@
 										<rows>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|логическое_поле_2" name="логическое поле 2" valueType="boolean" />
+													<field name="Обязательный выбор между ДА и НЕТ" />
 												</column>
+											</row>
+											<row>
 												<column>
-													<field fieldType="field" key="|Document|логическое_поле_3" name="логическое поле 3" valueType="boolean" />	
+													<field fieldType="field" key="|Document|логическое_поле_2" name="Да" valueType="boolean" />
+													<field fieldType="field" key="|Document|логическое_поле_3" name="Нет" valueType="boolean" />
 												</column>
 												<column>
 													<field fieldType="field" key="|Document|Согласующий" name="Согласующий" valueType="text" />
@@ -904,8 +907,8 @@
 							</row>
 							<row>
 								<column>
-									<field fieldType="field" key="|Document|Логическое_поле_2" name="Да" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
-									<field fieldType="field" key="|Document|Логическое_поле_3" name="Нет" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
+									<field fieldType="field" key="|Document|логическое_поле_2" name="Да" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
+									<field fieldType="field" key="|Document|логическое_поле_3" name="Нет" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
 								</column>
 							</row>
 							<row>
