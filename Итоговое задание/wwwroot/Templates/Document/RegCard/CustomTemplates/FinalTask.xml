@@ -114,7 +114,7 @@
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|числовое_поле_4" name="числовое поле 4" valueType="integer" />
+													<field fieldType="field" key="|Document|числовое_поле_4" name="Произведение стоимости и налога" valueType="integer" />
 												</column>
 											</row>
 											<row>

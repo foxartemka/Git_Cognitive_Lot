@@ -2658,11 +2658,11 @@ $(document).on('change', "input[name='ZaprCen']", function (e) {
 
 var OneRowMinCheck = function () {
 	
-    var count = $("div[data-name='ItemTab1'] div[data-rowkey]").length; // считаем количество строк в таблице
-    if (count < 1) // проверяем, есть ли в таблице строки
+    var count = $("div[data-name='ItemTab1'] div[data-rowkey]").length; 
+    if (count < 1) 
     {
-        $("div[data-name='ItemTab1'] div.table-add-row-button")[0].click(); // нажимаем на кнопку добавления строки в таблицу. Указываем [0], т.к. кнопок добавления строки в таблицу две (слева и справа). Если не указать [0], то добавится две строки кликами на обе кнопки
-		$("div[data-name='ItemTab1']").children().children("div[data-rowkey]").find(".table-remove-row-button").hide(); // скрыть кнопки удаления строк таблицы
+        $("div[data-name='ItemTab1'] div.table-add-row-button")[0].click();
+		$("div[data-name='ItemTab1']").children().children("div[data-rowkey]").find(".table-remove-row-button").hide(); 
     }
 	
 }
@@ -2692,6 +2692,32 @@ var HideTab1Edit = function()
 }
 $(document).on('change', "input[data-field-name='switchTab1']", function (e) {
     HideTab1Edit(); 
+});
+
+// Расчет результата по произведению двух полей (Стоимость, Налог)
+var PriceNalogProizv = function () {
+	// Поле цены
+	var price = $("input[name='moneyCost']");
+	// Поле налога
+	var nalog = $("input[name='nalogPerc']");
+	// Поле финальной суммы
+	var sum = $("input[name='sumNalPrice']");
+
+	var sumResult = 0;
+	var priceNum = $(price).autoNumeric('get');
+	var nalogNum = $(nalog).autoNumeric('get');
+	var sum1 = $(sum);
+
+	sumResult = priceNum * (nalogNum / 100);
+	sum1.autoNumeric('set', sumResult)
+
+	price.prop("required", true);
+}
+$(document).on('change', "input[name^='moneyCost']", function (e) {
+	PriceNalogProizv();
+});
+$(document).on('change', "input[name^='nalogPerc']", function (e) {
+	PriceNalogProizv();
 });
 
 scopes.onView(hidetablelongTermview);
