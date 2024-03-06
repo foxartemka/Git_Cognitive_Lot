@@ -171,7 +171,7 @@
 													<field fieldType="field" key="|Document|логическое_поле_3" name="Значение 2" valueType="boolean" />
 												</column>
 												<column>
-													<field fieldType="field" key="|Document|Согласующий" name="Согласующий" valueType="text" />
+													<field fieldType="field" key="|Document|Согласующий|Согласующий_ФИО" name="Согласующий" valueType="text" />
 												</column>
 											</row>
 											<row>
@@ -873,11 +873,17 @@
 								<column>
 									<field name="Значения для выбора" isLabel="true" edit-name="choices" title="Нужно выбрать одно из значений" />
 								</column>
+								<column>
+									<field name="Согласющий" isLabel="true" edit-name="accepterTitle" title="Выберите согласующего" />
+								</column>
 							</row>
 							<row>
 								<column>
 									<field fieldType="field" key="|Document|логическое_поле_2" name="Значение 1" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
 									<field fieldType="field" key="|Document|логическое_поле_3" name="Значение 2" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
+								</column>
+								<column>
+									<field fieldType="field" key="|Document|Согласующий|Согласующий" name="Согласующий" isValue="true" valueType="addressbook" edit-name="accepter" address-book-tool-selectable = "WorkGroup, Person, 'Все сотрудники'" address-book-tool="accepterBook" edit-addressbook-groups = "" edit-readonly="true" edit-required="true" />
 								</column>
 							</row>
 							<row>
