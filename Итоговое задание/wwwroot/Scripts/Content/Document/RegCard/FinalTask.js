@@ -2732,14 +2732,12 @@ var HideTab1Edit = function()
 		tab1Block.prop("required", true);
 		$("[data-related-field=switchTab1]").addClass("label-required");
 		OneRowMinCheck();
-		// tab1Block.val("1");
     } 
     else 
     {
         tab1Block.closest(".column-container").hide();	
 		tab1Block.prop("required", false); 
 		$("[data-related-field=switchTab1]").removeClass("label-required");
-		// tab1Block.val('');
     }
 }
 $(document).on('change', "input[data-field-name='switchTab1']", function (e) {

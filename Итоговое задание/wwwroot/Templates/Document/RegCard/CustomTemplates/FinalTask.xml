@@ -162,13 +162,13 @@
 										<rows>
 											<row>
 												<column>
-													<field name="Обязательный выбор между ДА и НЕТ" />
+													<field name="Выбор значений" />
 												</column>
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|логическое_поле_2" name="Да" valueType="boolean" />
-													<field fieldType="field" key="|Document|логическое_поле_3" name="Нет" valueType="boolean" />
+													<field fieldType="field" key="|Document|логическое_поле_2" name="Значение 1" valueType="boolean" />
+													<field fieldType="field" key="|Document|логическое_поле_3" name="Значение 2" valueType="boolean" />
 												</column>
 												<column>
 													<field fieldType="field" key="|Document|Согласующий" name="Согласующий" valueType="text" />
@@ -871,13 +871,13 @@
 						<rows>
 							<row>
 								<column>
-									<field name="Отметка одного из обязательных пунктов" isLabel="true" edit-name="choices" title="Нужно выбрать ДА или НЕТ" />
+									<field name="Значения для выбора" isLabel="true" edit-name="choices" title="Нужно выбрать одно из значений" />
 								</column>
 							</row>
 							<row>
 								<column>
-									<field fieldType="field" key="|Document|логическое_поле_2" name="Да" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
-									<field fieldType="field" key="|Document|логическое_поле_3" name="Нет" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
+									<field fieldType="field" key="|Document|логическое_поле_2" name="Значение 1" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
+									<field fieldType="field" key="|Document|логическое_поле_3" name="Значение 2" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
 								</column>
 							</row>
 							<row>
