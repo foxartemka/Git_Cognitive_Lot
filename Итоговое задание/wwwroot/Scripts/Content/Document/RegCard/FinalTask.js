@@ -2668,6 +2668,7 @@ var ChooseOneLogField1 = function () {
 $(document).on('change', "input[data-field-name='choicesLog2']", function (e) {
     ChooseOneLogField1(); 
 	CheckLogFill(); 
+	FillFieldChoices();
 });
 
 var ChooseOneLogField2 = function () {
@@ -2682,20 +2683,30 @@ var ChooseOneLogField2 = function () {
 $(document).on('change', "input[data-field-name='choicesLog3']", function (e) {
     ChooseOneLogField2(); 
 	CheckLogFill(); 
+	FillFieldChoices();
 });
 
 var CheckLogFill = function () {
 	var flagYes = $("input[data-field-name='choicesLog2']")
 	var flagNo = $("input[data-field-name='choicesLog3']")
-	var flagLabel = $("input[data-field-name='choices']")
+	// var flagLabel = $("input[data-field-name='choices']")
 
-	if ($(flagYes).is(":checked") || $(flagNo).is(":checked")) {
-		flagYes.prop("required", false);
-		flagNo.prop("required", false);
-	} else {
+	if (!$(flagYes).is(":checked") && !$(flagNo).is(":checked")) {
 		flagYes.prop("required", true);
 		flagNo.prop("required", true);
 	}
+}
+
+var FillFieldChoices = function () {
+	var flagYes = $("input[data-field-name='choicesLog2']")
+	var flagNo = $("input[data-field-name='choicesLog3']")
+	var textField5 = $("input[data-field-name='textField5']")
+
+	if ($(flagYes).is(":checked")) {
+		textField5.prop("value", "Значение 1")
+	} else if ($(flagNo).is(":checked")) {
+		textField5.prop("value", "Значение 2")
+	} 
 }
 
 var OneRowMinCheck = function () {
@@ -2713,12 +2724,14 @@ var HideTab1Edit = function()
 {
     var tab1Block = $(".table-edit-wrapper");	
     var flag = $("input[data-field-name='switchTab1']");	
+	tab1Block.closest(".column-container").hide();
 
     if ($(flag).is(":checked")) 
     {	
         tab1Block.closest(".column-container").show();
 		tab1Block.prop("required", true);
 		$("[data-related-field=switchTab1]").addClass("label-required");
+		OneRowMinCheck();
 		// tab1Block.val("1");
     } 
     else 
@@ -2728,9 +2741,6 @@ var HideTab1Edit = function()
 		$("[data-related-field=switchTab1]").removeClass("label-required");
 		// tab1Block.val('');
     }
-
-	OneRowMinCheck();
-	
 }
 $(document).on('change', "input[data-field-name='switchTab1']", function (e) {
     HideTab1Edit(); 
@@ -2815,6 +2825,7 @@ scopes.onRegister(SelectManager);
 scopes.onRegister(SpZakObyaz);
 scopes.onRegister(ZaprCenLogic);
 
+scopes.onEdit(FillFieldChoices);
 scopes.onEdit(HideTab1Edit);
 scopes.onEdit(osnEP);
 scopes.onEdit(checklongtermcontract);

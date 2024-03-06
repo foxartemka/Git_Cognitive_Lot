@@ -176,48 +176,12 @@
 											</row>
 											<row>
 												<column>
-													<field fieldType="field" key="|Document|текстовое_поле_5" name="текстовое поле 5" valueType="text" />
+													<field fieldType="field" key="|Document|текстовое_поле_5" name="Результат выбора значения" valueType="text" />
 												</column>
 												<column>
 													<field fieldType="field" key="|Document|дата_3" name="дата 3" valueType="date" />
 												</column>	
 											</row>
-											<!-- <row>
-												<column>       
-													<field fieldType="field" key="|Document|Признак_адреса_ППЗ" name="Единый адрес поставки для всех товаров, работ, услуг" valueType="boolean" />
-												</column>
-												<column>
-													<field fieldType="field" key="|Document|Ввести_сумму_по_строке" name="Ввести сумму по строке" valueType="boolean" />
-												</column>	
-											</row>
-											<row>
-												<column>
-													<field fieldType="field" key="|Document|Участник_закупки_СМП" name="Участник закупки МСП" valueType="boolean" />
-												</column>
-												<column>
-													<field fieldType="field" key="|Document|Инновационная_продукция" name="Инновационная продукция" valueType="boolean" />
-												</column>
-											</row>								
-											<row>										
-												<column>
-													<field fieldType="field" key="|Document|Закупка_не_учитывается" name="Закупка не учитывается при расчёте совокупного годового стоимостного объёма договоров" valueType="boolean" />
-												</column>
-												<column>								
-													<field fieldType="field" key="|Document|Малая_закупка" name="Малая закупка" valueType="boolean" />
-												</column>
-											</row>
-											<row>										
-												<column>
-													<field fieldType="field" key="|Document|Выбрать_позицию_из_справочника" name="Выбрать позицию из справочника" valueType="boolean"/>
-												</column>
-												<column>
-												</column>
-											</row>
-											<row>
-												<column>
-													<field fieldType="field" key="|Document|Категория_закупки" name="Категория закупки, которая не учитывается при расчёте совокупного годового стоимостного объёма договоров" valueType="longtext" />
-												</column>
-											</row> -->
 										</rows>
 									</block>
 								</column>
@@ -727,6 +691,11 @@
 				<column>			
 					<block id="tlcInfo" name="Общие сведения">
 						<rows>
+							<row>
+								<column>
+									<field fieldType="field" key="|Document|Регистрационный_номер" name="Регистрационный номер" valueType="text" isValue="true" edit-name="regnumber" edit-hidden="true" />	
+								</column>
+							</row>
 							<!-- <row>
 								<column>
 									<field name="Регистрационный номер" isLabel="true" edit-name="regnumber" title="Заполняется автоматически при создании документа" />
@@ -909,6 +878,12 @@
 								<column>
 									<field fieldType="field" key="|Document|логическое_поле_2" name="Да" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
 									<field fieldType="field" key="|Document|логическое_поле_3" name="Нет" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
+								</column>
+							</row>
+							<row>
+								<column>
+									<field name="Результат выбора значения" isLabel="true" />
+									<field fieldType="field" key="|Document|текстовое_поле_5" name="Результат выбора значения" isValue="true" edit-name="textField5" edit-readonly="true" valueType="text" />
 								</column>
 							</row>
 							<row>
