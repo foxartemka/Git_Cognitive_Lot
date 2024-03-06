@@ -2656,6 +2656,48 @@ $(document).on('change', "input[name='ZaprCen']", function (e) {
 	}
 });
 
+var ChooseOneLogField1 = function () {
+	var flagYes = $("input[data-field-name='choicesLog2']")
+	var flagNo = $("input[data-field-name='choicesLog3']")
+
+	if ($(flagYes).is(":checked")) {
+		flagNo.prop("checked", false);
+		flagNo.prop("required", false);
+	}
+}
+$(document).on('change', "input[data-field-name='choicesLog2']", function (e) {
+    ChooseOneLogField1(); 
+	CheckLogFill(); 
+});
+
+var ChooseOneLogField2 = function () {
+	var flagYes = $("input[data-field-name='choicesLog2']")
+	var flagNo = $("input[data-field-name='choicesLog3']")
+
+	if ($(flagNo).is(":checked")) {
+		flagYes.prop("checked", false);
+		flagYes.prop("required", false);
+	}
+}
+$(document).on('change', "input[data-field-name='choicesLog3']", function (e) {
+    ChooseOneLogField2(); 
+	CheckLogFill(); 
+});
+
+var CheckLogFill = function () {
+	var flagYes = $("input[data-field-name='choicesLog2']")
+	var flagNo = $("input[data-field-name='choicesLog3']")
+	var flagLabel = $("input[data-field-name='choices']")
+
+	if ($(flagYes).is(":checked") || $(flagNo).is(":checked")) {
+		flagYes.prop("required", false);
+		flagNo.prop("required", false);
+	} else {
+		flagYes.prop("required", true);
+		flagNo.prop("required", true);
+	}
+}
+
 var OneRowMinCheck = function () {
 	
     var count = $("div[data-name='ItemTab1'] div[data-rowkey]").length; 

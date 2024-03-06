@@ -895,8 +895,19 @@
 			</row>						
 			<row>
 				<column>
-					<block id="tlcPrZak" name="Предмет закупки">
+					<block id="tlcPrZak" name="Информация по согласованию">
 						<rows>
+							<row>
+								<column>
+									<field name="Отметка одного из обязательных пунктов" isLabel="true" edit-name="choices" title="Нужно выбрать ДА или НЕТ" />
+								</column>
+							</row>
+							<row>
+								<column>
+									<field fieldType="field" key="|Document|Логическое_поле_2" name="Да" edit-name="choicesLog2" edit-required="true" valueType="boolean" />
+									<field fieldType="field" key="|Document|Логическое_поле_3" name="Нет" edit-name="choicesLog3" edit-required="true" valueType="boolean" />
+								</column>
+							</row>
 							<row>
 								<column>
 									<field name="Предмет договора" isLabel="true" edit-name="registerNaimDogov" title ="Введите предмет договора" />									
@@ -1009,10 +1020,8 @@
 								</column>
 							</row>
 							<row>
-								
 							</row>
 							<row>
-								
 							</row>
 							<row>
 								<column>
