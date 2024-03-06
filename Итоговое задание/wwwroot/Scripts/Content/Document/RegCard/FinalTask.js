@@ -2656,6 +2656,17 @@ $(document).on('change', "input[name='ZaprCen']", function (e) {
 	}
 });
 
+var OneRowMinCheck = function () {
+	
+    var count = $("div[data-name='ItemTab1'] div[data-rowkey]").length; // считаем количество строк в таблице
+    if (count < 1) // проверяем, есть ли в таблице строки
+    {
+        $("div[data-name='ItemTab1'] div.table-add-row-button")[0].click(); // нажимаем на кнопку добавления строки в таблицу. Указываем [0], т.к. кнопок добавления строки в таблицу две (слева и справа). Если не указать [0], то добавится две строки кликами на обе кнопки
+		$("div[data-name='ItemTab1']").children().children("div[data-rowkey]").find(".table-remove-row-button").hide(); // скрыть кнопки удаления строк таблицы
+    }
+	
+}
+
 var HideTab1Edit = function() 
 {
     var tab1Block = $(".table-edit-wrapper");	
@@ -2675,6 +2686,8 @@ var HideTab1Edit = function()
 		$("[data-related-field=switchTab1]").removeClass("label-required");
 		// tab1Block.val('');
     }
+
+	OneRowMinCheck();
 	
 }
 $(document).on('change', "input[data-field-name='switchTab1']", function (e) {
