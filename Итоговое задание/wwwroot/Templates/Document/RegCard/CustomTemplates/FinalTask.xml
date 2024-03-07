@@ -874,7 +874,7 @@
 									<field name="Значения для выбора" isLabel="true" edit-name="choices" title="Нужно выбрать одно из значений" />
 								</column>
 								<column>
-									<field name="Согласющий" isLabel="true" edit-name="accepterTitle" title="Выберите согласующего" />
+									<field name="Согласующий" isLabel="true" edit-name="accepterTitle" title="Выберите согласующего" />
 								</column>
 							</row>
 							<row>

@@ -2669,6 +2669,7 @@ $(document).on('change', "input[data-field-name='choicesLog2']", function (e) {
     ChooseOneLogField1(); 
 	CheckLogFill(); 
 	FillFieldChoices();
+	AdressOKATORegionHideView();
 });
 
 var ChooseOneLogField2 = function () {
@@ -2684,6 +2685,7 @@ $(document).on('change', "input[data-field-name='choicesLog3']", function (e) {
     ChooseOneLogField2(); 
 	CheckLogFill(); 
 	FillFieldChoices();
+	AdressOKATORegionHideView();
 });
 
 var CheckLogFill = function () {
@@ -2770,6 +2772,28 @@ $(document).on('change', "input[name^='nalogPerc']", function (e) {
 	PriceNalogProizv();
 });
 
+// поле с выбором из адресной книги 1 (Согласующий) отображается и обязательно к заполнению, если установлено логическое поле 2; скрывается, если установлено логическое поле 3;
+var AdressOKATORegionHideView = function (e) {
+	var flagYes = $("input[data-field-name='choicesLog2']");
+	var flagNo = $("input[data-field-name='choicesLog3']");
+	var accepter = $("input[name='accepter']");
+	var accepterTitle = $("[data-related-field='accepterTitle']");
+
+	if ($(flagYes).is(":checked")) {
+		accepter.prop("required", true);
+		accepterTitle.addClass("label-required");
+		accepter.closest(".column-container").show();
+		accepterTitle.show();
+	}
+	else if ($(flagNo).is(":checked")) {
+		accepter.prop("required", false);
+		accepterTitle.removeClass("label-required");
+		accepter.closest(".column-container").hide();
+		accepter.val('')
+		accepterTitle.hide();
+	}
+}
+
 scopes.onView(hidetablelongTermview);
 scopes.onView(hidecategoryview);
 scopes.onView(hideblockchangeview);
@@ -2785,6 +2809,7 @@ scopes.onView(hideelements);
 scopes.onView(hidesummview);
 scopes.onView(hideProtocolSogl);
 
+scopes.onRegister(AdressOKATORegionHideView);
 scopes.onRegister(dolgosroch);
 scopes.onRegister(editreg);
 scopes.onRegister(hidecategoryreg);
@@ -2823,6 +2848,7 @@ scopes.onRegister(SelectManager);
 scopes.onRegister(SpZakObyaz);
 scopes.onRegister(ZaprCenLogic);
 
+scopes.onEdit(AdressOKATORegionHideView);
 scopes.onEdit(FillFieldChoices);
 scopes.onEdit(HideTab1Edit);
 scopes.onEdit(osnEP);
