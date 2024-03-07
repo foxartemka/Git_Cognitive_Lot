@@ -26,7 +26,10 @@
       </A>
       <E name="логическое_поле_2" datatype="boolean" index="true" />
       <E name="логическое_поле_3" datatype="boolean" index="true" />
-      <E displayname="Согласующий" name="Согласующий" datatype="dictionary(адресная книга 1,text)" index="true" />
+      <S name="Согласующий" displayname="Согласующий">
+        <E name="Согласующий" datatype="integer" index="true" displayname="Согласующий" extype="addressbook" abdata="Id" />
+        <E name="Согласующий_ФИО" datatype="text" index="true" displayname="Согласующий ФИО" abdata="Name" />
+      </S>
       <E name="текстовое_поле_5" datatype="text" index="true" />
       <E name="дата_3" datatype="date" index="true" />
       <E displayname="Категория" name="Категория" datatype="text" index="true" />
