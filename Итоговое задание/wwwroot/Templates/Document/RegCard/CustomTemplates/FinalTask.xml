@@ -719,8 +719,7 @@
 									<field fieldType="field" key="|Document|Организация_заказчик|Организация_заказчик" name="Организация-заказчик" valueType="addressbook" isValue="true" edit-name="registerOrgZa" edit-default-value="{currentOrganization}" address-book-tool = "registerOrgZa" edit-addressbook-groups="" address-book-tool-selectable = "Department, Department, {allCurrentOrganizations}|withoutSubs" children-selection="true" edit-required="true"/>
 								</column>
 								<column>
-									<field fieldType="field" key="|Document|Организатор_закупки|Организатор_закупки" name="Организатор закупки" valueType="addressbook" isValue="true" edit-name="OrgZakupki" 
-								edit-default-value="{addressbook,value=registerOrgZa,attribute=Name}" addressbook-main-field="registerOrgZa" addressbook-property="Name" edit-readonly="true" edit-required="true"/>
+									<field fieldType="field" key="|Document|Организатор_закупки|Организатор_закупки" name="Организатор закупки" valueType="addressbook" isValue="true" edit-name="OrgZakupki" edit-default-value="{addressbook,value=registerOrgZa,attribute=Name}" addressbook-main-field="registerOrgZa" addressbook-property="Name" edit-readonly="true" edit-required="true"/>
 								</column>
 							</row>
 							<row>
@@ -890,6 +889,10 @@
 								<column>
 									<field name="Результат выбора значения" isLabel="true" />
 									<field fieldType="field" key="|Document|текстовое_поле_5" name="Результат выбора значения" isValue="true" edit-name="textField5" edit-readonly="true" valueType="text" />
+								</column>
+								<column>
+									<field name="Категория" isLabel="true" title="Результат от Стоимости (менее 100000, от 100000 до 500000, свыше 500000)" />
+									<field fieldType="field" key="|Document|Категория" name="Категория" isValue="true" edit-name="categoryPrice" edit-readonly="true" valueType="text" />
 								</column>
 							</row>
 							<row>

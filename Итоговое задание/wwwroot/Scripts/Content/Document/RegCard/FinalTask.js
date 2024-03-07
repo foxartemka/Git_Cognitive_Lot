@@ -2761,21 +2761,21 @@ var PriceNalogProizv = function () {
 	var sum1 = $(sum);
 
 	sumResult = priceNum * (nalogNum / 100);
-	sum1.autoNumeric('set', sumResult)
+	sum1.autoNumeric('set', sumResult);
 
 	price.prop("required", true);
 }
 $(document).on('change', "input[name^='moneyCost']", function (e) {
 	PriceNalogProizv();
+	GetCategoryWithPrice();
 });
 $(document).on('change', "input[name^='nalogPerc']", function (e) {
 	PriceNalogProizv();
 });
 
-// поле с выбором из адресной книги 1 (Согласующий) отображается и обязательно к заполнению, если установлено логическое поле 2; скрывается, если установлено логическое поле 3;
+// Поле с выбором из адресной книги 1 (Согласующий) отображается и обязательно к заполнению, если установлено логическое поле 2; скрывается, если установлено логическое поле 3;
 var AdressBookHide = function (e) {
 	var flagYes = $("input[data-field-name='choicesLog2']");
-	var flagNo = $("input[data-field-name='choicesLog3']");
 	var accepter = $("input[name='accepter']");
 	var accepterTitle = $("[data-related-field='accepterTitle']");
 
@@ -2784,19 +2784,27 @@ var AdressBookHide = function (e) {
 		accepterTitle.addClass("label-required");
 		accepter.closest(".column-container").show();
 		accepterTitle.show();
+	} else {
+		accepter.prop("required", false);
+		accepterTitle.removeClass("label-required");
+		accepter.closest(".column-container").hide();
+		accepter.val('');
+		accepterTitle.hide();
 	}
-	else if ($(flagNo).is(":checked")) {
-		accepter.prop("required", false);
-		accepterTitle.removeClass("label-required");
-		accepter.closest(".column-container").hide();
-		accepter.val('')
-		accepterTitle.hide();
-	} else if (!$(flagYes).is(":checked") && !$(flagNo).is(":checked")) {
-		accepter.prop("required", false);
-		accepterTitle.removeClass("label-required");
-		accepter.closest(".column-container").hide();
-		accepter.val('')
-		accepterTitle.hide();
+}
+
+// текстовое поле 6 (Категория) рассчитывается (значения: Категория 1, Категория 2, Категория 3) 
+// в зависимости от числового поля 2 (Стоимость) (соответствующие условия: менее 100000, от 100000 до 500000, свыше 500000), недоступно для редактирования
+var GetCategoryWithPrice = function (e) {
+	var price = $("input[data-field-name='moneyCost']").autoNumeric('get');
+	var category = $("input[data-field-name='categoryPrice']");
+
+	if (price < 100000) {
+		category.val('Категория 1');
+	} else if (price >= 100000 && price <= 500000) {
+		category.val('Категория 2');
+	} else {
+		category.val('Категория 2');
 	}
 }
 
@@ -2854,6 +2862,7 @@ scopes.onRegister(SelectManager);
 scopes.onRegister(SpZakObyaz);
 scopes.onRegister(ZaprCenLogic);
 
+scopes.onEdit(GetCategoryWithPrice);
 scopes.onEdit(AdressBookHide);
 scopes.onEdit(FillFieldChoices);
 scopes.onEdit(HideTab1Edit);
